@@ -10,10 +10,10 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * 类型见 src/types/config.ts。
  */
 export const siteConfig: SiteConfig = withUserConfig("site", {
-	site: "https://shirone.mysqil.com/",
+	site: "https://vc.520403.xyz/",
 	base: "/",
-	title: "Shirone",
-	subtitle: "A Material 3 anime blog",
+	title: "armの小破站",
+	subtitle: "armの小破站",
 	// 电脑端顶栏标题与导航内容区域："left" 左对齐，"center" 居中。
 	topAppBar: {
 		contentAlign: "center",
@@ -27,11 +27,11 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		reduceMotion: true, // 是否展示减少动效切换
 		texture: true, // 是否展示背景纹理选择
 	},
-	lang: "en", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
+	lang: "zh_CN", // Language code, e.g. 'en', 'zh_CN', 'ja', etc.
 	// IANA time zone for precise post and moment timestamps. It is independent of lang.
 	timeZone: "Asia/Shanghai",
 	themeColor: {
-		hue: 315, // Default hue 0-360. 站点设计默认粉紫（偏二次元）；262 紫 / 345 粉 也可选
+		hue: 230, // Default hue 0-360. 站点设计默认粉紫（偏二次元）；262 紫 / 345 粉 也可选
 		fixed: false, // Hide the theme color picker for visitors
 		// Dynamic Material 3 palette style (TonalSpot/Vibrant/Content/Expressive/Rainbow/FruitSalad/Monochrome/Neutral/Fidelity)
 		style: "tonalSpot",
@@ -57,8 +57,30 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// desktop 用于 >= 1024px；mobile 仅用于 < 1024px 的首页，手机非首页不显示壁纸。
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
-			desktop: ["assets/images/banner/desktop/1.webp"],
-			mobile: ["assets/images/banner/mobile/1.webp"],
+			desktop: [
+				"/assets/desktop-banner/w1.webp",
+				"/assets/desktop-banner/w2.webp",
+				"/assets/desktop-banner/w3.webp",
+				"/assets/desktop-banner/w4.webp",
+				"/assets/desktop-banner/w5.webp",
+				"/assets/desktop-banner/w6.webp",
+				"/assets/desktop-banner/w7.webp",
+				"/assets/desktop-banner/w8.webp",
+				"/assets/desktop-banner/w9.webp",
+				"/assets/desktop-banner/w10.webp",
+			],
+			mobile: [
+				"/assets/mobile-banner/m1.webp",
+				"/assets/mobile-banner/m2.webp",
+				"/assets/mobile-banner/m3.webp",
+				"/assets/mobile-banner/m4.webp",
+				"/assets/mobile-banner/m5.webp",
+				"/assets/mobile-banner/m6.webp",
+				"/assets/mobile-banner/m7.webp",
+				"/assets/mobile-banner/m8.webp",
+				"/assets/mobile-banner/m9.webp",
+				"/assets/mobile-banner/m10.webp",
+			],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
 		position: "center",
@@ -70,23 +92,25 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "Shirone",
+			title: "armの博客",
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
+				"人が想像できることは、必ず人が実現できる",
+				"人を信じよ、しかしその百倍も自らを信じよ",
+				"一日は貴い一生である。これを空費してはならない",
+				"青春は永遠に、はじめからのやり直しだ",
+				"君ってさ、知らないうちに我的毎日になってたよ",
 				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
 				"今日はなんでもない日。でも、ちょっとだけいい日",
 			],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
-				enable: true,
+				enable: false,
 				// 打字速度（每个字符间隔，毫秒）。
 				speed: 100,
 				// 回退反向删除速度（每个字符间隔，毫秒）。
 				deleteSpeed: 50,
 				// 打字完成后停顿时间，单位为毫秒。
-				pauseTime: 2000,
+				pauseTime: 2300,
 				// 完成后是否循环播放；关闭表示只播放一次。
 				loop: true,
 			},
@@ -95,7 +119,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 是否开启多张图片自动轮播；多张图片时生效，单张图片时自动降级为静态展示。
 			enable: true,
 			// 轮播切换间隔时间（毫秒），运行时最小值限制为 3000ms。
-			interval: 6000,
+			interval: 3000,
 			// 交叉淡入淡出（Crossfade）过渡时长（毫秒，默认 1200ms）。
 			fadeDuration: 1200,
 			// 运镜呼吸动画模式："ken-burns"（默认，循环运镜）| "zoom-in"（推进）| "zoom-out"（拉远）| "pan-left"（左移）| "pan-right"（右移）| "none"（无运镜）。
@@ -121,7 +145,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 	},
 	favicon: [
 		// 浏览器标签页图标，路径相对于 public 目录。
-		{ src: "/logo/icon.webp" },
+		{ src: "/favicon/icon.png" },
 	],
 });
 

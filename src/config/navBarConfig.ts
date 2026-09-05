@@ -1,9 +1,5 @@
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
-import { devicesConfig } from "@/config/devicesConfig";
-import { projectsConfig } from "@/config/projectsConfig";
-import { skillsConfig } from "@/config/skillsConfig";
-import { timelineConfig } from "@/config/timelineConfig";
 import type {
 	NavBarConfig,
 	NavBarConfigOverride,
@@ -108,7 +104,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 	},
 	GitHub: {
 		name: "GitHub",
-		url: "https://github.com/LyraVoid/Shirone",
+		url: "https://github.com/magisk-for-arm",
 		icon: "fa6-brands:github",
 		external: true,
 		pageKey: "github",
@@ -119,25 +115,37 @@ const defaultNavBarConfig: NavBarConfig = {
 	links: [
 		LinkPresets.Home,
 		LinkPresets.Archive,
-		LinkPresets.Friends,
-		LinkPresets.Moments,
-		LinkPresets.Anime,
-		LinkPresets.Compass,
-		LinkPresets.Albums,
 		{
-			name: i18n(I18nKey.more),
-			icon: "material-symbols:apps-rounded",
+			name: "链接",
+			icon: "material-symbols:link",
 			children: [
-				...(timelineConfig.enable ? [LinkPresets.Timeline] : []),
-				...(projectsConfig.enable ? [LinkPresets.Projects] : []),
-				...(devicesConfig.enable ? [LinkPresets.Devices] : []),
-				...(skillsConfig.enable ? [LinkPresets.Skills] : []),
-				// 分类/标签入口不进导航菜单（避免菜单项过多），预设已登记指向独立页面，
-				// 需要时取消注释即可
-				// LinkPresets.Categories,
-				// LinkPresets.Tags,
-				LinkPresets.About,
 				LinkPresets.GitHub,
+				{
+					name: "Bilibili",
+					url: "https://space.bilibili.com/1661848169",
+					external: true,
+					icon: "fa6-brands:bilibili",
+				},
+			],
+		},
+		{
+			name: "我的",
+			icon: "material-symbols:person",
+			children: [
+				{
+					name: "番剧",
+					url: "/anime/",
+					icon: "material-symbols:movie",
+					pageKey: "anime",
+				},
+			],
+		},
+		{
+			name: "关于",
+			icon: "material-symbols:info",
+			children: [
+				LinkPresets.About,
+				LinkPresets.Friends,
 			],
 		},
 	],

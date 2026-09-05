@@ -50,27 +50,17 @@ export const fontConfig: FontConfig = withUserConfig("font", {
 	 */
 	fontFamilies: [
 		// ---------------------------------------------------------------------
-		// 1. 正文字体（现代几何圆润西文字体 Outfit，与 M3E 大圆角及悠哉圆体绝配）
+		// 1. 正文字体（MiSans Normal，与原 Mizuki 站一致，西文与数字统一观感）
 		// ---------------------------------------------------------------------
 		{
-			id: "outfit-body",
-			family: "Outfit",
+			id: "misans-body",
+			family: "MiSans",
 			role: "body",
-			source: "fontsource",
+			source: "local",
 			variants: [
 				{
-					file: "@fontsource/outfit/400.css",
+					file: "src/assets/fonts/MiSans-Normal.ttf",
 					weight: 400,
-					style: "normal",
-				},
-				{
-					file: "@fontsource/outfit/500.css",
-					weight: 500,
-					style: "normal",
-				},
-				{
-					file: "@fontsource/outfit/700.css",
-					weight: 700,
 					style: "normal",
 				},
 			],
@@ -80,17 +70,17 @@ export const fontConfig: FontConfig = withUserConfig("font", {
 		},
 
 		// ---------------------------------------------------------------------
-		// 2. 中文 / 日文 CJK 字体（悠哉圆体 Yozai Medium，全量简繁中日韩 100% 覆盖）
+		// 2. 中文 / 日文 CJK 字体（MiSans Normal，全量简繁中日韩覆盖）
 		// ---------------------------------------------------------------------
 		{
-			id: "yozai-cjk",
-			family: "Yozai Medium",
+			id: "misans-cjk",
+			family: "MiSans",
 			role: "cjk",
 			source: "local",
 			variants: [
 				{
-					file: "src/assets/fonts/Yozai-Medium.ttf",
-					weight: 500,
+					file: "src/assets/fonts/MiSans-Normal.ttf",
+					weight: 400,
 					style: "normal",
 				},
 			],
