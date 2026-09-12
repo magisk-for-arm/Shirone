@@ -44,6 +44,8 @@ src/generated/local-icon-collections.ts
 
 # anime snapshot data & downloaded covers
 src/data/anime-snapshots/*.json
+# Bangumi 快照随仓库提交：Vercel 构建环境无法运行 anime:sync，需读仓库内快照
+!src/data/anime-snapshots/bangumi.json
 public/assets/anime/covers/*
 !public/assets/anime/covers/.gitkeep
 
