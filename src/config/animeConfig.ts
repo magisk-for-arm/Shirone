@@ -85,7 +85,9 @@ export const animeConfig: AnimeConfig = withUserConfig("anime", {
 	/** 快照存储管理 */
 	snapshot: {
 		directory: "src/data/anime-snapshots",
-		staleAfterDays: 30,
+		// 快照随仓库提交，部署环境不联网抓取；若保持短过期时间，
+		// 30 天后的任何重新构建都会静默回退成示例数据，故设为极长有效期
+		staleAfterDays: 3650,
 		keepLastValid: true,
 	},
 });
