@@ -47,7 +47,7 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  * ─────────────────────────────────────────────────────────────────────────────
  */
 export const musicConfig: MusicConfig = withUserConfig("music", {
-	enable: true,
+	enable: false,
 	provider: "meting",
 	// tracks: [
 	// 	{
